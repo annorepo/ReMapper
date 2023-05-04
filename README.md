@@ -5,7 +5,7 @@
 - [Requirements](#Requirements)
 - [How to Replicate the Evaluation?](#How-to-Replicate-the-Evaluation)
 - [Experiments](#Experiments)
-- [Evaluation Results (JDiff)](evaluation-results-jdiff)
+- [Evaluation Results (JDiff)](#evaluation-results-jdiff)
 
 # General Introduction
 
