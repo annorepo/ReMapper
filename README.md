@@ -5,6 +5,7 @@
 - [Requirements](#Requirements)
 - [How to Replicate the Evaluation?](#How-to-Replicate-the-Evaluation)
 - [Experiments](#Experiments)
+- [Evaluation Results (JDiff)](#Evaluation-Results-(JDiff))
 
 # General Introduction
 
@@ -14,7 +15,7 @@ This is the replication package for ASE2023 submission, containing both tool and
 
 /src: The implementation of the evaluated approaches (including the proposed approach and the baseline approach).
 
-/experiment: The evaluation results of the proposed approach and the baseline approach.
+/experiments: The evaluation results of the proposed approach and the baseline approach.
 
 # Requirements
 
@@ -45,17 +46,17 @@ This is the replication package for ASE2023 submission, containing both tool and
 
 3. **Clone open-source project repositories (dataset)**
    
-   `run clone_projects.bat` &nbsp;(on windows environment)
+   `double-click clone_projects.bat` &nbsp;(on windows environment)
    
-   `run clone_projects.sh` &nbsp;&nbsp;&nbsp;(on linux environment)
+   `./clone_projects.sh` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(on linux environment)
    
    <img src="./clone_dataset.png" alt="clone dataset" style="zoom:60%;" />
 
 4. **Run the entity matching experiment**
 
-   Set  `datasetPath` to the directory where the cloned dataset is located
+   Set `datasetPath` to the directory where the cloned dataset is located (line 25 in org.remapper.experiment.EntityMatchingExperimentStarter.java)
 
-   From the Project tab navigate to `org.remapper.experiment.EntityMatchingExperimentStarter`
+   From the Project tab of IDEA navigate to `org.remapper.experiment.EntityMatchingExperimentStarter`
 
    Right-click on the file and select *Run EntityMatchingExperimentStarter.main()*
 
@@ -71,9 +72,9 @@ This is the replication package for ASE2023 submission, containing both tool and
 
 5. **Run the refactoring discovery experiment**
 
-   Set `datasetPath` to the directory where the cloned dataset is located
+   Set `datasetPath` to the directory where the cloned dataset is located (line 20 in org.remapper.experiment.RefactoringDiscoveryExperimentStarter.java)
 
-   From the Project tab navigate to `org.remapper.experiment.RefactoringDiscoveryExperimentStarter`
+   From the Project tab of IDEA navigate to `org.remapper.experiment.RefactoringDiscoveryExperimentStarter`
 
    Right-click on the file and select *Run RefactoringDiscoveryExperimentStarter.main()*
 
@@ -93,7 +94,7 @@ This is the replication package for ASE2023 submission, containing both tool and
 
 All results reported by the proposed approach and the baseline approach as well as the labels manually validated by the developers, are available at the following links:
 
-* [entity matching](experiment/entity_matching/)
+* [entity matching](experiments/entity%20matching/)
 
 Each JSON file represents the results of running entity matching experiments of the proposed approach and the baseline approach separately in a project.
 
@@ -121,7 +122,7 @@ Each JSON file represents the results of running entity matching experiments of 
 
 All results reported by the proposed approach and the baseline approach as well as the labels manually validated by the developers, are available at the following links:
 
-* [refactoring discovery](experiment/refactoring_discovery/)
+* [refactoring discovery](experiments/refactoring%20discovery/)
 
 Each JSON file represents the results of running refactoring discovery experiments of the proposed approach and the baseline approach separately in a project.
 
@@ -140,3 +141,9 @@ Each JSON file represents the results of running refactoring discovery experimen
 **startColumn**: start column of entity declaration  
 **endColumn**: end column of entity declaration  
 **developerConfirmation**: label manually validated by the developers
+
+# Evaluation Results (JDiff)
+
+All results reported by the pure entity matching algorithm (JDiff) as well as the labels manually validated by the developers, are available at the following links:
+
+* [evaluation results (JDiff)](experiments/evaluation%20results%20(JDiff)/)

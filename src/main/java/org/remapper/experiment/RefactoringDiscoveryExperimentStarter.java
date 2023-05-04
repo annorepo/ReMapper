@@ -48,7 +48,7 @@ public class RefactoringDiscoveryExperimentStarter {
     private void start(String datasetPath, String projectName) {
         ClassLoader classLoader = getClass().getClassLoader();
         try {
-            InputStream stream = classLoader.getResourceAsStream("benchmark/refactoring_discovery/" + projectName + ".txt");
+            InputStream stream = classLoader.getResourceAsStream("benchmark/refactoring discovery/" + projectName + ".txt");
             BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
             String commitId;
             while ((commitId = reader.readLine()) != null) {
@@ -92,7 +92,7 @@ public class RefactoringDiscoveryExperimentStarter {
         System.out.println();
         System.out.println("--------------------------------------------------------------------------------");
         System.out.println();
-        String filePath = datasetPath + "experiment/refactoring_discovery/" + projectName + ".json";
+        String filePath = datasetPath + "experiments/refactoring discovery/" + projectName + ".json";
         File file = new File(filePath);
         File directory = file.getParentFile();
         Gson gson = new GsonBuilder().disableHtmlEscaping().setPrettyPrinting().create();

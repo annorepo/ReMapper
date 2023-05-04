@@ -53,7 +53,7 @@ public class EntityMatchingExperimentStarter {
     private void start(String datasetPath, String projectName) {
         ClassLoader classLoader = getClass().getClassLoader();
         try {
-            InputStream stream = classLoader.getResourceAsStream("benchmark/entity_matching/" + projectName + ".txt");
+            InputStream stream = classLoader.getResourceAsStream("benchmark/entity matching/" + projectName + ".txt");
             BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
             String commitId;
             while ((commitId = reader.readLine()) != null) {
@@ -116,7 +116,7 @@ public class EntityMatchingExperimentStarter {
             System.out.println("Execution Time:\t\t" + (time2 - time1) + "\n");
             System.out.println("--------------------------------------------------------------------------------");
             System.out.println();
-            String filePath = datasetPath + "experiment/entity_matching/" + projectName + ".json";
+            String filePath = datasetPath + "experiments/entity matching/" + projectName + ".json";
             File file = new File(filePath);
             File directory = file.getParentFile();
             Gson gson = new GsonBuilder().disableHtmlEscaping().setPrettyPrinting().create();
