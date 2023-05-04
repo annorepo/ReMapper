@@ -1,6 +1,6 @@
 # Evaluation Results
 
-We compared ReMapper against the pure entity matching algorithm JDiff, and the evaluation results are presented in the Table 1. Notably, JDiff currently supports entity matching at the class, interface, and method levels only, therefore we evaluate the results for these three entity types only.
+We compared ReMapper against the pure entity matching algorithm JDiff, and the evaluation results are presented in the Table 1. Notably, JDiff currently supports entity matching at the class, interface, and method levels only, thus we evaluate the results for these three entity types only.
 
 &nbsp;&nbsp;&nbsp;&nbsp;<b>Table 1</b> Performance Per Entity Type
 
