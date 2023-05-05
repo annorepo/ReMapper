@@ -32,7 +32,7 @@ All results reported by the proposed approach and the baseline approach as well 
 
 Each JSON file represents the results of running entity matching experiments of the proposed approach and the baseline approach separately in a project.
 
-##### &emsp;&emsp;JSON descriptions
+#### &emsp;&emsp;JSON descriptions
 
 &emsp;&emsp;<font size=2>**repository**: Git repository URL</font>  
 &emsp;&emsp;<font size=2>**sha1**: Git commit ID</font>  
@@ -60,7 +60,7 @@ All results reported by the proposed approach and the baseline approach as well 
 
 Each JSON file represents the results of running refactoring discovery experiments of the proposed approach and the baseline approach separately in a project.
 
-##### &emsp;&emsp;JSON descriptions
+#### &emsp;&emsp;JSON descriptions
 
 &emsp;&emsp;<font size=2>**repository**: Git repository URL</font>  
 &emsp;&emsp;<font size=2>**sha1**: Git commit ID</font>    
