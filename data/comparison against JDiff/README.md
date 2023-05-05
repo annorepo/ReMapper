@@ -1,10 +1,10 @@
-# Comparing ReMapper Against JDiff
+# Comparing ReMapper against JDiff
 
 As an online appendix, we present here the comparison between ReMapper (the proposed approach) and JDiff (the latest pure entity matching algorithm). Notably, the setting of the comparison is exactly the same as what is specified in Section III-A of the paper. Because JDiff currently matches only classes, interfaces, and methods whereas ReMapper supports much more entity types, in this evaluation, we only considered the entity types supported by both of them (i.e., classes, interfaces, and methods).
 
 Our evaluation results are presented in Fig. 1. The horizontal axis presents the involved projects where the last one (“refactoring-engine”) is the closed-source project whereas others are open-source projects. The vertical axis presents the number of false positives and false negatives as well their sum (i.e., #FP, #FN, and #MST) on each subject project.
 
-<img src="./fig1.png" alt="fig1" style="zoom:60%;" />
+<img src="./fig1.png" alt="fig1" width="60%;" />
 
 &nbsp;&nbsp;&nbsp;&nbsp;**Fig. 1.** Number of Mistakes per Project
 

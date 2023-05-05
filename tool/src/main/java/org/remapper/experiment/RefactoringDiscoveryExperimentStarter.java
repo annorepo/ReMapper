@@ -92,7 +92,7 @@ public class RefactoringDiscoveryExperimentStarter {
         System.out.println();
         System.out.println("--------------------------------------------------------------------------------");
         System.out.println();
-        String filePath = datasetPath + "experiments/refactoring discovery/" + projectName + ".json";
+        String filePath = datasetPath + "data/refactoring discovery/" + projectName + ".json";
         File file = new File(filePath);
         File directory = file.getParentFile();
         Gson gson = new GsonBuilder().disableHtmlEscaping().setPrettyPrinting().create();

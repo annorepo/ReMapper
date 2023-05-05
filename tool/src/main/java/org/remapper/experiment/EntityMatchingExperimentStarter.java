@@ -116,7 +116,7 @@ public class EntityMatchingExperimentStarter {
             System.out.println("Execution Time:\t\t" + (time2 - time1) + "\n");
             System.out.println("--------------------------------------------------------------------------------");
             System.out.println();
-            String filePath = datasetPath + "experiments/entity matching/" + projectName + ".json";
+            String filePath = datasetPath + "data/entity matching/" + projectName + ".json";
             File file = new File(filePath);
             File directory = file.getParentFile();
             Gson gson = new GsonBuilder().disableHtmlEscaping().setPrettyPrinting().create();
