@@ -98,7 +98,7 @@ Each JSON file represents the results of running refactoring discovery experimen
 
    <img src="./data/figures/import_project.png" alt="import project" width="80%;" />
 
-3. **Clone open-source project repositories**
+3. **Clone open-source project repositories (dataset)**
    
    `double-click clone_projects.bat` &emsp;&nbsp;(on windows environment)
    
