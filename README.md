@@ -24,7 +24,7 @@ This is the replication package for ASE2023 submission, containing both tool and
 
 # Data
 
-### Entity Matching
+### 1. Entity Matching
 
 All results reported by the proposed approach and the baseline approach as well as the labels manually validated by the developers, are available at the following links:
 
@@ -52,7 +52,7 @@ Each JSON file represents the results of running entity matching experiments of 
 &emsp;&emsp;<font size=2>**endColumn**: end column of entity declaration</font>  
 &emsp;&emsp;<font size=2>**developerConfirmation**: label manually validated by the developers</font>
 
-### Refactoring Discovery
+### 2. Refactoring Discovery
 
 All results reported by the proposed approach and the baseline approach as well as the labels manually validated by the developers, are available at the following links:
 
