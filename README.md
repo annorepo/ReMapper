@@ -100,9 +100,9 @@ Each JSON file represents the results of running refactoring discovery experimen
 
 3. **Clone open-source project repositories**
    
-   `double-click clone_projects.bat` &nbsp;(on windows environment)
+   `double-click clone_projects.bat` &emsp;&nbsp;(on windows environment)
    
-   `./clone_projects.sh` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(on linux environment)
+   `./clone_projects.sh` &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(on linux environment)
    
    <img src="./data/figures/clone_dataset.png" alt="clone dataset" width="60%;" />
 
