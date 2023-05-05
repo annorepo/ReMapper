@@ -1,14 +1,16 @@
-# Evaluation Results
+# Comparing ReMapper Against JDiff
 
-Our evaluation results are presented in Figure 1. The horizontal axis presents the involved projects where the last one (“refactoring-engine”) is the closed-source project whereas others are open-source projects. The vertical axis presents the number of false positives and false negatives as well their sum (i.e., #FP, #FN, and #MST) on each subject project.
+As an online appendix, we present here the comparison between ReMapper (the proposed approach) and JDiff (the latest pure entity matching algorithm). Notably, the setting of the comparison is exactly the same as what is specified in Section III-A of the paper. Because JDiff currently matches only classes, interfaces, and methods whereas ReMapper supports much more entity types, in this evaluation, we only considered the entity types supported by both of them (i.e., classes, interfaces, and methods).
+
+Our evaluation results are presented in Fig. 1. The horizontal axis presents the involved projects where the last one (“refactoring-engine”) is the closed-source project whereas others are open-source projects. The vertical axis presents the number of false positives and false negatives as well their sum (i.e., #FP, #FN, and #MST) on each subject project.
 
 <img src="./fig1.png" alt="fig1" style="zoom:60%;" />
 
-&nbsp;&nbsp;&nbsp;&nbsp;**Fig. 1.** Number of Mistakes Per Project
+&nbsp;&nbsp;&nbsp;&nbsp;**Fig. 1.** Number of Mistakes per Project
 
-From Figure 1, we observe that compared against the pure entity matching algorithm JDiff, ReMapper substantially reduced the frequency of mistakes: The total number of mistakes (i.e., #MST) was reduced from 738 to 68, with a substantial reduction of 90.8%=(738-68)/738. On average, the number of false positives per project was reduced by 51.4%=(3.5-1.7)/3.5 and the number of false negatives per project was reduced by 95%=(31.7-1.6)/31.7. We performed a significance test to validate whether there is a statistically significant difference between the total number of mistakes caused by the two approaches. Our evaluation results (p-value=3.41E-5 and effect size of Cohen's d=1.48) confirmed that the reduction in #MST was statistically significant. 
+From Fig. 1, we observe that compared against the pure entity matching algorithm JDiff, ReMapper substantially reduced the frequency of mistakes: The total number of mistakes (i.e., #MST) was reduced from 738 to 48, with a substantial reduction of 93.5%=(738-48)/738. On average, the number of false positives per project was reduced by 62.9%=(3.5-1.3)/3.5 and the number of false negatives per project was reduced by 96.9%=(31.7-1)/31.7. We performed a significance test to validate whether there is a statistically significant difference between the total number of mistakes caused by the two approaches. Our evaluation results (p-value=2.17E-5 and effect size of Cohen's d=1.52) confirmed that the reduction in #MST was statistically significant. 
 
-We further investigated their performance on matching different categories of software entities, i.e., "classes", "interfaces" and "methods". (Notably, JDiff currently supports entity matching at the class, interface, and method levels only) The evaluation results are presented in Table 1. We observe from Table 1 that ReMapper outperforms JDiff on all of the involved entity types. We also notice that ReMapper resulted in high precision and recall on all of the entity types. The minimal precision (on "method") was 99.21%, and the minimal recall (on "method") was 99.38%. It may suggest that ReMapper worked well on all entity types. The evaluated approaches reported the highest numbers of mistakes in matching entities of "method". It is reasonable because the numbers of involved methods are significantly larger than those of classes and interfaces.
+We further investigated their performance on matching different categories of software entities, i.e., "classes", "interfaces", and "methods". The evaluation results are presented in Table 1. We observe from Table 1 that ReMapper outperforms JDiff on all of the involved entity types.
 
 &nbsp;&nbsp;&nbsp;&nbsp;**Table 1** Performance Per Entity Type
 
@@ -98,7 +100,3 @@ We further investigated their performance on matching different categories of so
         <td align="right">16.46%</td>
 	</tr>
 </table>
-
-All results reported by the pure entity matching algorithm (JDiff) as well as the labels manually validated by the developers, are available at the following links:
-
-* [entity matching](entity%20matching/)

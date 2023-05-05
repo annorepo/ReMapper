@@ -3,8 +3,8 @@
 - [General Introduction](#General-Introduction)
 - [Contents of the Replication Package](#Contents-of-the-Replication-Package)
 - [Requirements](#Requirements)
+- [Data](#Data)
 - [How to Replicate the Evaluation?](#How-to-Replicate-the-Evaluation)
-- [Experiments](#Experiments)
 - [Evaluation Results (JDiff)](#evaluation-results-jdiff)
 
 # General Introduction
@@ -21,6 +21,60 @@ This is the replication package for ASE2023 submission, containing both tool and
 
 - Java 11.0.17 or newer
 - Apache Maven 3.6.3 or newer
+
+# Data
+
+### Entity Matching
+
+All results reported by the proposed approach and the baseline approach as well as the labels manually validated by the developers, are available at the following links:
+
+* [entity matching](experiments/entity%20matching/)
+
+Each JSON file represents the results of running entity matching experiments of the proposed approach and the baseline approach separately in a project.
+
+### JSON descriptions
+
+&emsp;<font size=2>**repository**: Git repository URL</font>  
+&emsp;<font size=2>**sha1**: Git commit ID</font>  
+&emsp;<font size=2>**url**: patch corresponding to the commit</font>  
+&emsp;<font size=2>**commonMatching**: common matched entity pairs reported by the proposed approach and the baseline approach</font>  
+&emsp;<font size=2>**ourApproach**: inconsistent entity pairs reported by the proposed approach against the baseline approach</font>  
+&emsp;<font size=2>**baseline**: inconsistent entity pairs reported by the baseline approach against the proposed approach</font>  
+&emsp;<font size=2>**leftSideLocation**: position of the entity in the old version</font>  
+&emsp;<font size=2>**rightSideLocation**: position of the entity in the new version</font>  
+&emsp;<font size=2>**container**: container in which entity belongs to</font>  
+&emsp;<font size=2>**type**: type of entity</font>  
+&emsp;<font size=2>**name**: name of entity</font>  
+&emsp;<font size=2>**filePath**: file path in which the entity is declared</font>  
+&emsp;<font size=2>**startLine**: start line of entity declaration</font>  
+&emsp;<font size=2>**endLine**: end line of entity declaration</font>  
+&emsp;<font size=2>**startColumn**: start column of entity declaration</font>  
+&emsp;<font size=2>**endColumn**: end column of entity declaration</font>  
+&emsp;<font size=2>**developerConfirmation**: label manually validated by the developers</font>
+
+### Refactoring Discovery
+
+All results reported by the proposed approach and the baseline approach as well as the labels manually validated by the developers, are available at the following links:
+
+* [refactoring discovery](experiments/refactoring%20discovery/)
+
+Each JSON file represents the results of running refactoring discovery experiments of the proposed approach and the baseline approach separately in a project.
+
+### JSON descriptions
+
+&emsp;<font size=2>**repository**: Git repository URL</font>  
+&emsp;<font size=2>**sha1**: Git commit ID</font>    
+&emsp;<font size=2>**url**: patch corresponding to the commit</font>    
+&emsp;<font size=2>**ourApproach**: refactoring operations reported by the proposed approach</font>    
+&emsp;<font size=2>**baseline**: refactoring operations reported by the baseline approach</font>    
+&emsp;<font size=2>**leftSideLocation**: position of the entity in the old version</font>    
+&emsp;<font size=2>**rightSideLocation**: position of the entity in the new version</font>    
+&emsp;<font size=2>**filePath**: file path in which the entity is declared</font>    
+&emsp;<font size=2>**startLine**: start line of entity declaration</font>    
+&emsp;<font size=2>**endLine**: end line of entity declaration</font>    
+&emsp;<font size=2>**startColumn**: start column of entity declaration</font>    
+&emsp;<font size=2>**endColumn**: end column of entity declaration</font>    
+&emsp;<font size=2>**developerConfirmation**: label manually validated by the developers</font>
 
 # How to Replicate the Evaluation?
 
@@ -87,60 +141,6 @@ This is the replication package for ASE2023 submission, containing both tool and
    `datasetPath/experiment/refactoring_discovery/<project_name>.json` 
    
    <img src="./refactoring_discovery_experiment_results.png" alt="refactoring discovery experiment results" style="zoom:80%;" />
-
-# Experiments
-
-### Entity Matching
-
-All results reported by the proposed approach and the baseline approach as well as the labels manually validated by the developers, are available at the following links:
-
-* [entity matching](experiments/entity%20matching/)
-
-Each JSON file represents the results of running entity matching experiments of the proposed approach and the baseline approach separately in a project.
-
-### JSON descriptions
-
-**repository**: Git repository URL  
-**sha1**: Git commit ID  
-**url**: patch corresponding to the commit  
-**commonMatching**: common matched entity pairs reported by the proposed approach and the baseline approach  
-**ourApproach**: inconsistent entity pairs reported by the proposed approach against the baseline approach  
-**baseline**: inconsistent entity pairs reported by the baseline approach against the proposed approach  
-**leftSideLocation**: position of the entity in the old version  
-**rightSideLocation**: position of the entity in the new version  
-**container**: container in which entity belongs to  
-**type**: type of entity  
-**name**: name of entity  
-**filePath**: file path in which the entity is declared  
-**startLine**: start line of entity declaration  
-**endLine**: end line of entity declaration  
-**startColumn**: start column of entity declaration  
-**endColumn**: end column of entity declaration  
-**developerConfirmation**: label manually validated by the developers
-
-### Refactoring Discovery
-
-All results reported by the proposed approach and the baseline approach as well as the labels manually validated by the developers, are available at the following links:
-
-* [refactoring discovery](experiments/refactoring%20discovery/)
-
-Each JSON file represents the results of running refactoring discovery experiments of the proposed approach and the baseline approach separately in a project.
-
-### JSON descriptions
-
-**repository**: Git repository URL  
-**sha1**: Git commit ID  
-**url**: patch corresponding to the commit  
-**ourApproach**: refactoring operations reported by the proposed approach  
-**baseline**: refactoring operations reported by the baseline approach  
-**leftSideLocation**: position of the entity in the old version  
-**rightSideLocation**: position of the entity in the new version  
-**filePath**: file path in which the entity is declared  
-**startLine**: start line of entity declaration  
-**endLine**: end line of entity declaration  
-**startColumn**: start column of entity declaration  
-**endColumn**: end column of entity declaration  
-**developerConfirmation**: label manually validated by the developers
 
 # Evaluation Results (JDiff)
 
