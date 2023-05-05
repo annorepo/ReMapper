@@ -94,7 +94,7 @@ Each JSON file represents the results of running refactoring discovery experimen
 
    Go to *File* -> *Open...*
 
-   Browse to the root directory of project ReMapper
+   Browse to the **tool** directory of project ReMapper
 
    Click *OK*
 
