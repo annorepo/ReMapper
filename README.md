@@ -120,7 +120,7 @@ Each JSON file represents the results of running refactoring discovery experimen
 
    All results of entity matching will be stored in the local file system in JSON format:
 
-   `datasetPath/experiment/entity_matching/<project_name>.json` 
+   `datasetPath/data/entity matching/<project>.json` 
 
    <img src="./data/figures/entity_matching_experiment_results.png" alt="entity matching experiment results" width="80%;" />
 
@@ -138,7 +138,7 @@ Each JSON file represents the results of running refactoring discovery experimen
    
    All results of refactoring discovery will be stored in the local file system in JSON format:
    
-   `datasetPath/experiment/refactoring_discovery/<project_name>.json` 
+   `datasetPath/data/refactoring discovery/<project>.json` 
    
    <img src="./data/figures/refactoring_discovery_experiment_results.png" alt="refactoring discovery experiment results" width="80%;" />
 
