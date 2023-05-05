@@ -1,8 +1,16 @@
 # Evaluation Results
 
-We compared ReMapper against the pure entity matching algorithm JDiff, and the evaluation results are presented in the Table 1. Notably, JDiff currently supports entity matching at the class, interface, and method levels only, therefore we evaluate the results for these three entity types only.
+Our evaluation results are presented in Figure 1. The horizontal axis presents the involved projects where the last one (“refactoring-engine”) is the closed-source project whereas others are open-source projects. The vertical axis presents the number of false positives and false negatives as well their sum (i.e., #FP, #FN, and #MST) on each subject project.
 
-<center><b>Table 1</b> Performance Per Entity Type
+<img src="./fig1.png" alt="fig1" style="zoom:80%;" />
+
+&nbsp;&nbsp;&nbsp;&nbsp;**Fig. 1.** Number of Mistakes per Project
+
+From Figure 1, we observe that compared against the pure entity matching algorithm JDiff, ReMapper substantially reduced the frequency of mistakes: The total number of mistakes (i.e., #MST) was reduced from 738 to 68, with a substantial reduction of 90.8%=(738-68)/738. On average, the number of false positives per project was reduced by 51.4%=(3.5-1.7)/3.5 and the number of false negatives per project was reduced by 95%=(31.7-1.6)/31.7. We performed a significance test to validate whether there is a statistically significant difference between the total number of mistakes caused by the two approaches. Our evaluation results (p-value=3.41E-5 and effect size of Cohen's d=1.48) confirmed that the reduction in #MST was statistically significant. 
+
+We further investigated their performance on matching different categories of software entities, i.e., "classes", "interfaces" and "methods". (Notably, JDiff currently supports entity matching at the class, interface, and method levels only) The evaluation results are presented in Table 1. We observe from Table 1 that ReMapper outperforms JDiff on all of the involved entity types. We also notice that ReMapper resulted in high precision and recall on all of the entity types. The minimal precision (on "method") was 99.21%, and the minimal recall (on "method") was 99.38%. It may suggest that ReMapper worked well on all entity types. The evaluated approaches reported the highest numbers of mistakes in matching entities of  "method". It is reasonable because the numbers of involved methods are significantly larger than those of classes, interfaces.
+
+&nbsp;&nbsp;&nbsp;&nbsp;**Table 1** Performance Per Entity Type
 
 <table>
 	<tr>
@@ -90,7 +98,6 @@ We compared ReMapper against the pure entity matching algorithm JDiff, and the e
         <td align="right">16.46%</td>
 	</tr>
 </table>
-</center>
 
 All results reported by the pure entity matching algorithm (JDiff) as well as the labels manually validated by the developers, are available at the following links:
 
