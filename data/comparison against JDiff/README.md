@@ -15,7 +15,7 @@ From Fig. 1, we observe that compared against the pure entity matching algorithm
 We further investigated their performance on matching different categories of software entities, i.e., "classes", "interfaces", and "methods". The evaluation results are presented in Table 1. We observe from Table 1 that ReMapper outperforms JDiff on all of the involved entity types.
 
 <div align='center' >
-<b>Table 1</b> Performance Per Entity Type
+<b>Table 1</b> Performance per Entity Type
 
 <table>
 	<tr>
