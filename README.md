@@ -37,7 +37,7 @@ Each JSON file represents the results of running entity matching experiments of 
 &emsp;&emsp;<font size=2>**repository**: Git repository URL</font>  
 &emsp;&emsp;<font size=2>**sha1**: Git commit ID</font>  
 &emsp;&emsp;<font size=2>**url**: patch corresponding to the commit</font>  
-&emsp;&emsp;<font size=2>**commonMatching**: common matched entity pairs reported by the proposed approach and the baseline approach</font>  
+&emsp;&emsp;<font size=2>**commonMatching**: common matched entity pairs reported by the evaluated approaches</font>  
 &emsp;&emsp;<font size=2>**ourApproach**: inconsistent entity pairs reported by the proposed approach against the baseline approach</font>  
 &emsp;&emsp;<font size=2>**baseline**: inconsistent entity pairs reported by the baseline approach against the proposed approach</font>  
 &emsp;&emsp;<font size=2>**leftSideLocation**: position of the entity in the old version</font>  
@@ -142,7 +142,7 @@ Each JSON file represents the results of running refactoring discovery experimen
    
    <img src="./data/figures/refactoring_discovery_experiment_results.png" alt="refactoring discovery experiment results" width="80%;" />
 
-# Comparing ReMapper against JDiff
+# Comparison against JDiff
 
 As an online appendix, we present here the comparison between ReMapper (the proposed approach) and JDiff (the latest pure entity matching algorithm). Notably, the setting of the comparison is exactly the same as what is specified in Section III-A of the paper. Because JDiff currently matches only classes, interfaces, and methods whereas ReMapper supports much more entity types, in this evaluation, we only considered the entity types supported by both of them (i.e., classes, interfaces, and methods).
 
@@ -150,13 +150,13 @@ Our evaluation results are presented in Fig. 1. The horizontal axis presents the
 
 <img src="./data/comparison against JDiff/fig1.png" alt="fig1" width="60%;" />
 
-&nbsp;&nbsp;&nbsp;&nbsp;**Fig. 1.** Number of Mistakes per Project
+&emsp;&emsp;&emsp;&emsp;**Fig. 1.** Number of Mistakes per Project
 
-From Fig. 1, we observe that compared against the pure entity matching algorithm JDiff, ReMapper substantially reduced the frequency of mistakes: The total number of mistakes (i.e., #MST) was reduced from 738 to 48, with a substantial reduction of 93.5%=(738-48)/738. On average, the number of false positives per project was reduced by 62.9%=(3.5-1.3)/3.5 and the number of false negatives per project was reduced by 96.9%=(31.7-1)/31.7. We performed a significance test to validate whether there is a statistically significant difference between the total number of mistakes caused by the two approaches. Our evaluation results (p-value=2.17E-5 and effect size of Cohen's d=1.52) confirmed that the reduction in #MST was statistically significant.
+From Fig. 1, we observe that compared against the pure entity matching algorithm JDiff, ReMapper substantially reduced the frequency of mistakes: The total number of mistakes (i.e., #MST) was reduced from 738 to 48, with a substantial reduction of 93.5%=(738-48)/738. On average, the number of false positives per project was reduced by 62.9%=(3.5-1.3)/3.5 and the number of false negatives per project was reduced by 96.8%=(31.7-1)/31.7. We performed a significance test to validate whether there is a statistically significant difference between the total number of mistakes caused by the two approaches. Our evaluation results (p-value=2.17E-5 and effect size of Cohen's d=1.52) confirmed that the reduction in #MST was statistically significant.
 
 We further investigated their performance on matching different categories of software entities, i.e., "classes", "interfaces", and "methods". The evaluation results are presented in Table 1. We observe from Table 1 that ReMapper outperforms JDiff on all of the involved entity types.
 
-&nbsp;&nbsp;&nbsp;&nbsp;**Table 1** Performance Per Entity Type
+&emsp;&emsp;&emsp;&emsp;**Table 1** Performance Per Entity Type
 
 <table>
 	<tr>
